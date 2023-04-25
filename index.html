@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My E-commerce Website</title>
+	
+
+	<link rel="stylesheet" href="style.css">
+	
+</head>
+<body>
+
+	
+<header>
+	<div class="logo">
+		<a href="index.html"><img src="logo.png" alt="My E-commerce Website"></a>
+	</div>
+	<nav>
+		<ul>
+			<li><a href="#">Home</a></li>
+			<li><a href="#">Shop</a>
+				<ul>
+					<li><a href="#">Men's Clothing</a></li>
+					<li><a href="#">Women's Clothing</a></li>
+					<li><a href="#">Accessories</a></li>
+				</ul>
+			</li>
+			<li><a href="#">About Us</a></li>
+			<li><a href="#">Contact Us</a></li>
+		</ul>
+		<div class="auth-buttons">
+			<a href="reg.html" class="register-button">Register</a>
+			<a href="sign.html" class="signin-button">Sign In</a>
+		</div>
+		<div class="cart">
+			<a href="#"><i class="fa fa-shopping-cart"></i> Cart (0)</a>
+		</div>
+	</nav>
+</header>
+
+	<main>
+<div class="image-container">
+  <img id="main-image" src="g.jpg" alt="your-image">
+  <div class="arrow left-arrow">&lt;</div>
+  <div class="arrow right-arrow">&gt;</div>
+</div>
+   <script>
+  const images = [
+  "logo.png",
+  "g.jpg",
+  "logo.png"
+];
+
+// get the main image element and arrow elements
+const mainImage = document.querySelector("#main-image");
+const leftArrow = document.querySelector(".left-arrow");
+const rightArrow = document.querySelector(".right-arrow");
+
+// define a variable to keep track of the current image index
+let currentImageIndex = 0;
+
+// define a function to change the image
+function changeImage() {
+  // set the image source to the current image
+  mainImage.src = images[currentImageIndex];
+}
+
+// listen for left arrow key press
+leftArrow.addEventListener("click", function() {
+  currentImageIndex--;
+  if (currentImageIndex < 0) {
+    currentImageIndex = images.length - 1;
+  }
+  changeImage();
+});
+
+// listen for right arrow key press
+rightArrow.addEventListener("click", function() {
+  currentImageIndex++;
+  if (currentImageIndex >= images.length) {
+    currentImageIndex = 0;
+  }
+  changeImage();
+});
+
+
+  </script>
+</div>
+	<section class="category">
+		<h2>Featured Products</h2>
+		<ul>
+			<li class="product">
+				<img src="g.jpg" alt="Product 1">
+				<h3>Product 1</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+				<button>Add to Cart</button>
+			</li>
+			<li class="product">
+				<img src="g.jpg" alt="Product 2">
+				<h3>Product 2</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+				<button>Add to Cart</button>
+			</li>
+			<li class="product">
+				<img src="g.jpg" alt="Product 3">
+				<h3>Product 3</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+				<button>Add to Cart</button>
+			</li>
+			<li class="product">
+				<img src="g.jpg" alt="Product 4">
+				<h3>Product 4</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+				<button>Add to Cart</button>
+			</li>
+		</ul>
+		<h2>Featured Products</h2>
+		<ul>
+			<li class="product">
+				<img src="g.jpg" alt="Product 1">
+				<h3>Product 1</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+				<button>Add to Cart</button>
+			</li>
+			<li class="product">
+				<img src="g.jpg" alt="Product 2">
+				<h3>Product 2</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+				<button>Add to Cart</button>
+			</li>
+			<li class="product">
+				<img src="g.jpg" alt="Product 3">
+				<h3>Product 3</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+				<button>Add to Cart</button>
+			</li>
+			<li class="product">
+				<img src="g.jpg" alt="Product 4">
+				<h3>Product 4</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+				<button>Add to Cart</button>
+			</li>
+		</ul>
+		<h2>Featured Products</h2>
+		<ul>
+			<li class="product">
+				<img src="g.jpg" alt="Product 1">
+				<h3>Product 1</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+				<button>Add to Cart</button>
+			</li>
+			<li class="product">
+				<img src="g.jpg" alt="Product 2">
+				<h3>Product 2</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+				<button>Add to Cart</button>
+			</li>
+			<li class="product">
+				<img src="g.jpg" alt="Product 3">
+				<h3>Product 3</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+				<button>Add to Cart</button>
+			</li>
+			<li class="product">
+				<img src="g.jpg" alt="Product 4">
+				<h3>Product 4</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+				<button>Add to Cart</button>
+			</li>
+		</ul>
+	</section>
+</main>
+	<footer>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-4">
+				<h3>About Us</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut mauris eget magna consequat faucibus.</p>
+			</div>
+			<div class="col-md-4">
+				<h3>Quick Links</h3>
+				<ul>
+					<li><a href="#">Home</a></li>
+					<li><a href="#">Shop</a></li>
+					<li><a href="#">About Us</a></li>
+					<li><a href="#">Contact Us</a></li>
+				</ul>
+			</div>
+			<div class="col-md-4">
+				<h3>Contact Us</h3>
+				<p>123 Main Street<br>Anytown, USA 12345<br>Phone: (123) 456-7890<br>Email: info@myecommercewebsite.com</p>
+			</div>
+		</div>
+	</div>
+	<div class="bottom-bar">
+		
+			
+				<div class="col">
+					<p>&copy; 2021 My E-commerce Website. All rights reserved.</p>
+				</div>
+				
+		
+	</div>
+</footer>
+</body>
+</html>
